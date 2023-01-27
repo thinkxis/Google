@@ -1,28 +1,52 @@
-# Client
+# for Google Team by Dipesh Bhoir
+What is the Goal?
+We have a Angular 14 Universal application with firebase@9.16.0 client and firebase-admin@11.5.0 server
+- Meta tags should render from firestore data
+- Html page should render filling in firestore data
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
+# STEP1
+`cd` in [google] folder then `npm install` to install client modules
 
-## Development server
+# STEP2
+Assuming you are in google folder
+`cd dist/functions` then then `npm install` to install firebase functions modules
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# STEP3
+Assuming you are in google folder
+`ng run client:serve-ssr` to run angular universal ssr app
+project runs on http://localhost:4200
 
-## Code scaffolding
+# STEP4
+`cd dist` then `firebase serve` to run firebase hosting and functions
+project runs on http://localhost:5002
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Suggestion
+- Use postman for SSR 
+- Use Chrome Browser for normal App
 
-## Build
+No need to Deploy. Just Manage to
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Meta tags should render from firestore data
+How to verify?
+Use Postman Get Request on localhost:5002 after firebase serve
 
-## Running unit tests
+2. Html page should render filling in firestore data
+How to verify?
+Check if the below statement renders
+<span style="background: green;" *ngIf="map$|async as m">id:{{m}}</span>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# STEP5 (optional)
+`cd dist` then `firebase deploy` to deploy firebase hosting and functions
+here is the url it will be hosted on
+https://test-dipesh.web.app
 
-## Running end-to-end tests
+# project name = client
+We are not using any external library.
+Angular 14 Universal application with firebase@9.16.0 client and firebase-admin@11.5.0 server
+(call/whatsapp) +91 9892381514
+email: DipeshBhoir@hotmail.com
+We could also use GoogleMeet or any thing necessery to get this done.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# Google
+# ALL RIGHTS RESERVED | Dipesh Bhoir
+https://github.com/dipesious
+https://twitter.com/dipesious
